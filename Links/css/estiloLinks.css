@@ -329,32 +329,47 @@ main {
     border-color: var(--ambar);
 }
 
-/* ===== Video explicativo ===== */
+/* ===== Contenedor y Botón de Video ===== */
 .video-seccion {
     margin-top: 64px;
 }
 
-.video-marco {
-    position: relative;
-    width: 100%;
-    max-width: 860px;
-    margin: 0 auto;
-    aspect-ratio: 16 / 9;
-    background-color: #000;
-    border: 1px solid var(--borde-fuerte);
-    border-radius: var(--radio-lg);
-    box-shadow: var(--sombra);
-    overflow: hidden;
+.video-enlace-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
 }
 
-.video-marco iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+.video-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #e50914, #b81d24); /* Rojo dinámico tipo YouTube/Media */
+    border-radius: var(--radio-lg, 12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 14px rgba(229, 9, 20, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
+.video-boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.5);
+    filter: brightness(1.08);
+}
+
+.video-boton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
+}
+
+.icono-play {
+    flex-shrink: 0;
+}
 /* ===== Pie de página ===== */
 footer {
     margin-top: 56px;
