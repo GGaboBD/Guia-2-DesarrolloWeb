@@ -329,6 +329,32 @@ main {
     border-color: var(--ambar);
 }
 
+/* ===== Video explicativo ===== */
+.video-seccion {
+    margin-top: 64px;
+}
+
+.video-marco {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    border: 1px solid var(--borde-fuerte);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+
+.video-marco iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* ===== Pie de página ===== */
 footer {
     margin-top: 56px;
@@ -433,6 +459,10 @@ footer {
     .pie {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .video-seccion {
+        margin-top: 48px;
     }
 }
 
